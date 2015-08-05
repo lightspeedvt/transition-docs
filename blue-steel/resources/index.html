@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Resources - LightSpeed VT</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">LightSpeed VT</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../boilerplate/">Boilerplate</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blue Steel <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../overview/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../configuration/">Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../modules/">Modules</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Resources</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../modules/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a rel="prev" >
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#resources">Resources</a></li>
+        
+            <li><a href="#example-request">Example Request</a></li>
+        
+            <li><a href="#api">API</a></li>
+        
+            <li><a href="#config-properties">Config Properties</a></li>
+        
+            <li><a href="#errors">Errors</a></li>
+        
+            <li><a href="#redirects">Redirects</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="resources">Resources</h1>
+<p>Other than composing modules and rendering the ui, loading and sending data is one of the core functions of the application. It's pretty simple but has some important things to keep in mind when using external resources.</p>
+<hr />
+<h3 id="example-request">Example Request</h3>
+<pre><code class="js">app.loadResource( &quot;course&quot;, {
+    data: {id:id},
+    success: configLoaded,
+    abort: false,
+    showError: false,
+});
+</code></pre>
+
+<hr />
+<h3 id="api">API</h3>
+<p>The <code>loadConfig</code> method supports three arguments:  </p>
+<ul>
+<li>
+<p><strong>resourceName</strong><br />
+The name of a resource from the JSON config</p>
+</li>
+<li>
+<p><strong>configObject</strong><br />
+A config object that conforms to the <a href="http://api.jquery.com/jquery.ajax/">jQuery AJAX api</a> and has a few extra properties (detailed below)</p>
+</li>
+<li>
+<p><strong>notifyApp</strong><br />
+Boolean - By default when a resource is loaded the ui will be covered and a loading animation shown. Passing <code>false</code> will prevent it from showing.</p>
+</li>
+</ul>
+<hr />
+<h3 id="config-properties">Config Properties</h3>
+<p>The config object has a few special properties that you can pass:</p>
+<ul>
+<li>
+<p><strong>abort</strong><br />
+Boolean - By default, loading a resource will "abort" any previous calls that are pending. Passing <code>false</code> will prevent that behavior.</p>
+</li>
+<li>
+<p><strong>showError</strong><br />
+Boolean - By default, server faults will be shown. Passing <code>false</code> will suppress them.</p>
+</li>
+</ul>
+<hr />
+<h3 id="errors">Errors</h3>
+<p>The server can send back custom error messages that will be displayed in a modal dialog. This is achieved by setting an <code>error</code> object in the JSON response. They look like this:</p>
+<pre><code class="json">&quot;error&quot; : {
+    &quot;type&quot; : &quot;NoAccess&quot;,
+    &quot;message&quot; : &quot;Oops! You don't have access to this content...&quot;,
+    &quot;detail&quot; : &quot;This content is not currently available for your account. Sorry about that!&quot;,
+    &quot;showReload&quot; : false
+}
+</code></pre>
+
+<hr />
+<h3 id="redirects">Redirects</h3>
+<p>In some cases you may want to redirect the user when they load a resource. To do so simply add a <code>redirect</code> property to the JSON response. This will change the url and proceed as expected.</p>
+<pre><code class="json">&quot;redirect&quot; : &quot;trainingcenter/course/courseid&quot;
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>
