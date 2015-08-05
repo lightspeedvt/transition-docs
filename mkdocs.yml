@@ -1,2 +1,10 @@
-site_name: LightSpeed VT Boilerplate
-theme: readthedocs
+site_name: LightSpeed VT
+theme: flatly
+pages:
+- Home: 'index.md'
+- Boilerplate: 'boilerplate.md'
+- Blue Steel:
+    - 'Introduction': 'blue-steel/overview.md'
+    - 'Configuration': 'blue-steel/configuration.md'
+    - 'Modules': 'blue-steel/modules.md'
+    - 'Resources': 'blue-steel/resources.md'
