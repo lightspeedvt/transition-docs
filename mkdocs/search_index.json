@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Transition Documentation\n\n\nThis documentation serves to provide an overview of the following LightSpeed VT projects:\n\n\n\n\n\n\nBoilerplate\n\n\n\n\n\n\nBlue Steel", 
+            "text": "Transition Documentation\n\n\nThis documentation serves to provide an overview of the following LightSpeed VT projects:\n\n\n\n\nBoilerplate\n  \n\n\nBlue Steel\n  \n\n\nVideo Player", 
             "title": "Home"
         }, 
         {
             "location": "/#transition-documentation", 
-            "text": "This documentation serves to provide an overview of the following LightSpeed VT projects:    Boilerplate    Blue Steel", 
+            "text": "This documentation serves to provide an overview of the following LightSpeed VT projects:   Boilerplate     Blue Steel     Video Player", 
             "title": "Transition Documentation"
         }, 
         {
