@@ -2,13 +2,18 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Owners Manual\n\n\nThis documentation serves to provide an overview of the following LightSpeed VT projects:\n\n\n\n\nBoilerplate\n\n\nBlue Steel", 
+            "text": "Transition Documentation\n\n\nThis documentation serves to provide an overview of the following LightSpeed VT projects:\n\n\n\n\n\n\nBoilerplate\n\n\n\n\nBlue Steel", 
             "title": "Home"
         }, 
         {
-            "location": "/#owners-manual", 
-            "text": "This documentation serves to provide an overview of the following LightSpeed VT projects:   Boilerplate  Blue Steel", 
-            "title": "Owners Manual"
+            "location": "/#transition-documentation", 
+            "text": "This documentation serves to provide an overview of the following LightSpeed VT projects:", 
+            "title": "Transition Documentation"
+        }, 
+        {
+            "location": "/#boilerplate", 
+            "text": "Blue Steel", 
+            "title": "Boilerplate"
         }, 
         {
             "location": "/boilerplate/", 
