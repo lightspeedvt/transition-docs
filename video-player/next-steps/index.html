@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>LightSpeed VT</title>
+	<title>Next Steps - LightSpeed VT</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/base.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">LightSpeed VT</a>
+            <a class="navbar-brand" href="../..">LightSpeed VT</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -50,14 +50,14 @@
             <ul class="nav navbar-nav">
             
             
-                <li class="active">
-                    <a href=".">Home</a>
+                <li >
+                    <a href="../..">Home</a>
                 </li>
             
             
             
                 <li >
-                    <a href="boilerplate/">Boilerplate</a>
+                    <a href="../../boilerplate/">Boilerplate</a>
                 </li>
             
             
@@ -67,19 +67,19 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="blue-steel/overview/">Introduction</a>
+                            <a href="../../blue-steel/overview/">Introduction</a>
                         </li>
                     
                         <li >
-                            <a href="blue-steel/configuration/">Configuration</a>
+                            <a href="../../blue-steel/configuration/">Configuration</a>
                         </li>
                     
                         <li >
-                            <a href="blue-steel/modules/">Modules</a>
+                            <a href="../../blue-steel/modules/">Modules</a>
                         </li>
                     
                         <li >
-                            <a href="blue-steel/resources/">Resources</a>
+                            <a href="../../blue-steel/resources/">Resources</a>
                         </li>
                     
                     </ul>
@@ -87,20 +87,20 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Video Player <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="video-player/overview/">Overview</a>
+                            <a href="../overview/">Overview</a>
                         </li>
                     
                         <li >
-                            <a href="video-player/interactivity/">Interactivity</a>
+                            <a href="../interactivity/">Interactivity</a>
                         </li>
                     
-                        <li >
-                            <a href="video-player/next-steps/">Next Steps</a>
+                        <li class="active">
+                            <a href="./">Next Steps</a>
                         </li>
                     
                     </ul>
@@ -111,13 +111,13 @@
 
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
-                <li class="disabled">
-                    <a rel="next" >
+                <li >
+                    <a rel="next" href="../interactivity/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="boilerplate/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -131,19 +131,27 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#transition-documentation">Transition Documentation</a></li>
+        <li class="main active"><a href="#next-steps">Next Steps</a></li>
+        
+            <li><a href="#hls-adaptive-streaming">HLS (Adaptive Streaming)</a></li>
+        
+            <li><a href="#possible-solutions">Possible Solutions:</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="transition-documentation">Transition Documentation</h1>
-<p>This documentation serves to provide an overview of the following LightSpeed VT projects:</p>
+<h1 id="next-steps">Next Steps</h1>
+<p>There are a few different ideas we have about where the video player needs to go, and how we'll best get it there. This page's purpose is to collect and document those ideas.</p>
+<h3 id="hls-adaptive-streaming">HLS (Adaptive Streaming)</h3>
+<p>After doing some extensive R&amp;D it's apparent that in its native form, HLS video will not be usable for interactive videos. This is due to varying levels of browser support, inconsistencies, etc. The main sticking points seem to be looping and seamlessly transitioning to new videos.  </p>
+<h3 id="possible-solutions">Possible Solutions:</h3>
 <blockquote>
-<p><a href="./boilerplate">Boilerplate</a>  </p>
-<p><a href="./blue-steel/overview">Blue Steel</a>  </p>
-<p><a href="./video-player">Video Player</a></p>
+<p><strong>THEOPlayer</strong><br />
+<font size="3">The THEOPlayer team may be able to help solve the issues with HLS playback. If they are able to develop an HLS playback engine that can seamlessly loop, as well as seamlessly switch streams to another video (once a selection has been made), problem solved.</font></p>
+<p><strong>HLS + Progressive (Hybrid)</strong><br />
+<font size="3">We've had some discussions about whether we could use progressive videos just for looping and insert them at the end of HLS videos. This could work but might be problematic.</font></p>
 </blockquote></div>
         </div>
 
@@ -153,9 +161,9 @@
             <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
     </body>
 </html>

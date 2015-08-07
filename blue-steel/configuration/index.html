@@ -86,6 +86,27 @@
                 </li>
             
             
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Video Player <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../video-player/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../video-player/interactivity/">Interactivity</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../video-player/next-steps/">Next Steps</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
             </ul>
 
             <!-- Search, Navigation and Repo links -->
@@ -112,14 +133,7 @@
     
         <li class="main active"><a href="#initialization">Initialization</a></li>
         
-    
-        <li class="main "><a href="#configuration">Configuration</a></li>
-        
-            <li><a href="#globals">Globals</a></li>
-        
-            <li><a href="#modules">Modules</a></li>
-        
-            <li><a href="#resources">Resources</a></li>
+            <li><a href="#configuration">Configuration</a></li>
         
     
     </ul>
@@ -142,7 +156,7 @@
 <tbody>
 <tr>
 <td><code>data-version</code></td>
-<td>Used to cache-bust application files and should be updated if any of the core files are modified</td>
+<td>Used to cache-bust application files and should be updated if any of the core files are modified.<br><strong>NOTE:</strong> To update this value in production, update the following in <code>tc/index.cfm</code> line 13:<br><code>&lt;cfset versionNumber = "5.216.0" /&gt;</code></td>
 </tr>
 <tr>
 <td><code>data-config</code></td>
@@ -158,7 +172,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="configuration">Configuration</h1>
+<h2 id="configuration">Configuration</h2>
 <p>The application uses a JSON configuration that is generated server-side via Coldfusion. To see a full example, log in and access the service at <code>/tc/data/global.cfm?format=json</code>  </p>
 <p>Once the application has loaded the config can be accessed using the following code snippet:</p>
 <pre><code class="js">var app = lsvt.core.Application.getInstance();
