@@ -8,13 +8,13 @@ Let's take a look at the `script` tag and point out a few things of note:
 ```
 | Attribute | Description |
 |-----------|-------------|
-| `data-version` | Used to cache-bust application files and should be updated if any of the core files are modified|
+| `data-version` | Used to cache-bust application files and should be updated if any of the core files are modified.<br>**NOTE:** To update this value in production, update the following in `tc/index.cfm` line 13:<br>`<cfset versionNumber = "5.216.0" />`|
 | `data-config` | Defines the JSON resource that configures the application |
 | `src` | Path to bootstrap.js with version number, should be the same as the `data-version` attribute |
 | `data-theme` | Defines the "theme" to use for loading module views. See [Configuring The View](modules/#configuring-the-view) for more information. |
 
 
-#Configuration
+##Configuration
 
 The application uses a JSON configuration that is generated server-side via Coldfusion. To see a full example, log in and access the service at `/tc/data/global.cfm?format=json`  
 

@@ -8,3 +8,7 @@ pages:
     - 'Configuration': 'blue-steel/configuration.md'
     - 'Modules': 'blue-steel/modules.md'
     - 'Resources': 'blue-steel/resources.md'
+- Video Player:
+    - 'Overview': 'video-player/overview.md'
+    - 'Interactivity': 'video-player/interactivity.md'
+    - 'Next Steps': 'video-player/next-steps.md'
